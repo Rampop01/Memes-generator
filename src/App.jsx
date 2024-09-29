@@ -92,14 +92,15 @@ function MemeGenerator() {
                 />
 
                 <Draggable>
-                  <h2 className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-black text-white text-4xl uppercase md:text-8xl font-bold text-center mt-4">
-                    {topText}
-                  </h2>
+                  <div className="absolute top-5 left-1/2 transform -translate-x-1/2 drop-shadow-stroke p-2 rounded-md text-black text-4xl md:text-6xl font-bold text-center cursor-move h-fit uppercase ">
+                    <span>{topText}</span>
+                  </div>
                 </Draggable>
+                {/* Draggable Bottom Text */}
                 <Draggable>
-                  <h2 className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-black   text-white text-4xl uppercase md:text-8xl font-bold text-center mb-4">
-                    {bottomText}
-                  </h2>
+                  <div className="absolute  bottom-5 left-1/2 transform -translate-x-1/2 drop-shadow-stroke p-2 rounded-md  text-4xl md:text-6xl font-bold text-center cursor-move uppercase">
+                    <span>{bottomText}</span>
+                  </div>
                 </Draggable>
               </div>
             </div>

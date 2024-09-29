@@ -8,6 +8,14 @@ export default {
         "inner-neumorphic":
           "inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff",
       },
+      dropShadow: {
+        stroke: [
+          "3px 0 0 white",
+          "0 3px 0 white",
+          "-3px 0 0 white",
+          "0 -3px 0 white",
+        ],
+      },
     },
   },
   plugins: [],
