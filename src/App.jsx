@@ -32,9 +32,9 @@ function MemeGenerator() {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Header */}
-      <header className="flex gap-4 p-4 bg-gray-400 shadow-md">
+      <header className="flex gap-4 p-4 bg-gray-400 shadow-md ">
         <h1 className="text-4xl font-bold text-white">MemesLand</h1>
         <img src={meme} alt="Meme Icon" className="w-12 h-12" />
       </header>
