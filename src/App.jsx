@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import html2canvas from "html2canvas";
 import meme from "../public/assets/meme.jpeg";
 import memesData from "./component/memesData";
+import Draggable from "react-draggable";
 
 function MemeGenerator() {
   const [topText, setTopText] = useState("");
@@ -75,24 +76,32 @@ function MemeGenerator() {
           </div>
 
           {memeImage && (
-            <div
-              ref={memeRef}
-              className="relative mb-6 neumorphic p-6 rounded-xl shadow-lg max-w-lg w-full flex justify-center items-center bg-gray-900"
-            >
-              <img
-                src={memeImage}
-                alt="Meme"
-                className="w-full h-auto rounded-lg mx-auto"
-                crossOrigin="anonymous"
-              />
+            <div>
+              <p className="text-center mb-2">
+                Drag text to your preferred posistion
+              </p>
+              <div
+                ref={memeRef}
+                className="relative mb-6 neumorphic p-6 rounded-xl shadow-lg max-w-lg w-full flex flex-col justify-center items-center bg-gray-900"
+              >
+                <img
+                  src={memeImage}
+                  alt="Meme"
+                  className="w-full h-auto rounded-lg mx-auto"
+                  crossOrigin="anonymous"
+                />
 
-              <h2 className="absolute top-5 left-1/2 transform -translate-x-1/2 text-white text-8xl font-bold text-center">
-                {topText}
-              </h2>
-
-              <h2 className="absolute bottom-5 left-1/2 transform -translate-x-1/2 text-white text-8xl font-bold text-center mb-4">
-                {bottomText}
-              </h2>
+                <Draggable>
+                  <h2 className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-black text-white text-4xl uppercase md:text-8xl font-bold text-center mt-4">
+                    {topText}
+                  </h2>
+                </Draggable>
+                <Draggable>
+                  <h2 className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-black   text-white text-4xl uppercase md:text-8xl font-bold text-center mb-4">
+                    {bottomText}
+                  </h2>
+                </Draggable>
+              </div>
             </div>
           )}
 
